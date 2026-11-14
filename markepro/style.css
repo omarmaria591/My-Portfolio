@@ -1,0 +1,260 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #101d46;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #101d46;
+}
+
+.logo span,
+.hero h1 span {
+    color: #0866f5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #101d46;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0866f5;
+}
+
+.nav-btn,
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-btn,
+.primary-btn {
+    background: #0866f5;
+    color: white;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+    background: #004bc0;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content,
+.hero-image {
+    flex: 1;
+}
+
+.subtitle {
+    color: #0866f5;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #667085;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    border: 2px solid #0866f5;
+    color: #0866f5;
+}
+
+.secondary-btn:hover {
+    background: #0866f5;
+    color: white;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Services */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f7f9ff;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.services > p,
+.about p,
+.contact p {
+    color: #667085;
+    line-height: 1.8;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(8, 102, 245, 0.12);
+}
+
+.service-card h3 {
+    color: #0866f5;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* About */
+.about {
+    max-width: 900px;
+    margin: auto;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+/* Contact */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f7f9ff;
+}
+
+.contact .btn {
+    margin-top: 25px;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #101d46;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
